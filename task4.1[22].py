@@ -12,3 +12,16 @@
 # Input1: 2 4 6 8 10 10 8 6 4 2
 # Input2: 3 9 12 15 18
 # Output: Повторяющихся чисел нет
+
+lst1 = '2 4 6 8 10 12 10 8 6 4 2'
+lst2 = '3 9 6 12 15 18'
+
+list1 = lst1.split()
+list2 = lst2.split()
+count = 0
+for idx, value in enumerate(list2):
+    if value in list1[idx + 1:]:
+        if value.count(value) > 0:
+            print(value, end = ', ')
+        else:
+            print('Повторяющихся чисел нет')
