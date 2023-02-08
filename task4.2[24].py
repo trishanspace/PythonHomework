@@ -14,3 +14,9 @@
 
 # Input1: 11, 92, 1, 42, 15, 12, 11, 81
 # Output1: Макс. кол-во ягод 184, собрано для куста 1
+
+list1 = 1, 2, 3, 4, 5, 6, 7, 8
+
+for idx, value in enumerate(list1):
+    summa = list1[idx - 1] + list1[idx] + list1[idx + 1]
+    print(f'Макс. кол-во ягод {summa}, собрано для куста {value}')
