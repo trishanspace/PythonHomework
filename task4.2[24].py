@@ -17,6 +17,12 @@
 
 list1 = 1, 2, 3, 4, 5, 6, 7, 8
 
+summa_max = 0
+
 for idx, value in enumerate(list1):
-    summa = list1[idx - 1] + list1[idx] + list1[idx + 1]
-    print(f'Макс. кол-во ягод {summa}, собрано для куста {value}')
+    idx_next = idx + 1 if idx != len(list1) - 1 else idx - len(list1) + 1
+    summa = list1[idx - 1] + list1[idx] + list1[idx_next]
+    if summa > summa_max:
+        summa_max = summa
+        find_idx = idx
+print(f'Макс. кол-во ягод {summa_max}, собрано для куста {find_idx + 1}')
