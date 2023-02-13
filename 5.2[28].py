@@ -5,3 +5,11 @@
 # <function_name>(0,0) -> 0
 # <function_name>(0,2) -> 2
 # <function_name>(3,0) -> 3
+
+def summa(a, b):
+    if a >= 0 and b >= 0:
+        return a + b
+
+a = int(input('a = '))
+b = int(input('b = '))
+print(summa(a, b))   
