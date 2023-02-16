@@ -17,3 +17,18 @@
 
 # (**) Усложнение. Присвоение значений переменным a1,d,n запишите, используя только один input, 
 # в одну строку, вам понадобится распаковка и Comprehension или map
+a = int(input('Введите a '))
+n = int(input('Введите n '))
+d = int(input('Введите d '))
+def arithmetic_progression(start, step, lenght):
+    return [start + step * i for i in range(lenght)]
+print(arithmetic_progression(a, n, d))
+
+    
+# a1, d, n = [int(el) for el in input("Введите a1, d, n ").split()]
+
+# # Основной вариант решения
+# def create_arith_progression(start, step, lenght):
+#     return [start + step * idx for idx in range(lenght)]
+
+# print(create_arith_progression(a1, d, n))
