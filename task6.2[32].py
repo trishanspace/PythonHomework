@@ -18,3 +18,14 @@
 # Примеры/Тесты:
 # lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 # <function_name>(lst1, 2, 10) -> [(1, 9), (3, 3), (7, 4), (9, 10), (10, 2), (13, 8), (14, 10), (19, 7)]
+
+
+# def check_indexes(lst, min_bound, max_bound):
+#     return [idx for idx, el in enumerate(lst) if min_bound <= el <= max_bound]
+
+
+# lst1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+
+# print(check_indexes(lst1, 2, 10))
+# print(check_indexes(lst1, 2, 9))
+# print(check_indexes(lst1, 0, 6))
