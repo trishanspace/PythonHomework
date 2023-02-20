@@ -30,3 +30,13 @@
 #     <function_name>("пара-ра-рам рам-пуум-пупам па-ре-по-дам") -> (False, [{'а': 4}, {'а': 2, 'у': 3}])
 #     <function_name>("Трам-пара-папам-парам-па-пам-пам-па Пум-пурум-пу-пурум-трам-пам-па") -> (False, [{'а': 11}, {'у': 6, 'а': 3}])
 #     <function_name>("Пам-парам-пурум Пум-пурум-карам") -> (True, [{'а': 3, 'у': 2}, {'у': 3, 'а': 2}])
+
+lst = "Пам-парам-пурум Пум-пурум-карам"
+lst2 = lst.split()
+ 
+def rhythm(vowels) -> bool:
+    vowels = [sum(i in 'уеыаоэяию' for i in vowels) for vowels in lst2]
+    if len(set(vowels)) == 1 : return True
+    return False
+ 
+print(rhythm(lst))
