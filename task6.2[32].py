@@ -42,5 +42,6 @@
 def print_operation_table(operation, num_rows, num_columns):
     for i in range(1, num_rows+1):
         print(*(operation(i, j) for j in range(1, num_columns+1)))
-print(print_operation_table(lambda i,j: i*j, 6,6))
-print(print_operation_table(lambda i,j: i**j, 4,4))
+print_operation_table(lambda i,j: i*j, 6,6)
+print('-'*10)
+print_operation_table(lambda i,j: i**j, 4,4)
