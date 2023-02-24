@@ -61,9 +61,9 @@ def get_data() -> tuple: # запрашивает данные у пользов
 
 def get_file_name() -> str:
     return input('Введите имя файла: ')
-def get_batch_data(name_file: str) -> list:
+def get_batch_data(file: str) -> list:
     lst = []
-    with open('data08_1.txt', 'r', encoding='utf-8') as file:
+    with open('data08_1.txt', 'r', encoding='utf-8') as surname:
         for line in file:
             temp = tuple(line.strip().split('#'))
             lst.append(temp)
@@ -74,5 +74,8 @@ def batch_create(data: dict, batch_data) -> dict:
     for elem in batch_data:
         data = create(data, elem)
     return data
+
+def select_surname (lst, surname):
+    return ((lambda x, y, z, w: f'{x} {y} {z} {w}') (x, y, z, w) for x, y, z, w in lst if x [0][0][1] == surname [0][1])
 
 menu(phone_book)
