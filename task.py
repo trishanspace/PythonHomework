@@ -45,7 +45,7 @@ def menu(data: dict):
             data = batch_create(data, batch_data)
         else:
             print('Некорректный ввод данных, введите ещё раз: ')
-def create(data: dict, elem: tuple) -> dict: # добавляет запись в существующую телефонную книгу
+def create(data: dict) -> dict: # добавляет запись в существующую телефонную книгу
     return data
 
 def print_phone_book(data: dict) -> None:
